@@ -1,0 +1,59 @@
+{
+  "target": "norm_Process temperature [K]",
+  "feature_columns": [
+    "Machine failure",
+    "TWF",
+    "HDF",
+    "PWF",
+    "OSF",
+    "RNF",
+    "Type_H",
+    "Type_L",
+    "Type_M",
+    "norm_Air temperature [K]",
+    "norm_Rotational speed [rpm]",
+    "norm_Torque [Nm]",
+    "norm_Tool wear [min]"
+  ],
+  "denorm_process_temp_k": {
+    "min": 305.7,
+    "max": 313.8
+  },
+  "physical_feature_bounds": {
+    "norm_Air temperature [K]": {
+      "min": 295.3,
+      "max": 304.5
+    },
+    "norm_Rotational speed [rpm]": {
+      "min": 1168.0,
+      "max": 2886.0
+    },
+    "norm_Torque [Nm]": {
+      "min": 3.8,
+      "max": 76.6
+    },
+    "norm_Tool wear [min]": {
+      "min": 0.0,
+      "max": 253.0
+    }
+  },
+  "random_state": 42,
+  "test_size": 0.2,
+  "metrics_r2_test": {
+    "ML1_Ridge": 0.757335056068491,
+    "ML2_GradientBoosting": 0.8061473887024293,
+    "ML3_CatBoost": 0.8062922914892577,
+    "ML4_Bagging": 0.8062985693592076,
+    "ML5_Stacking": 0.80401938710964,
+    "ML6_FCNN_Keras": 0.788796244833629
+  },
+  "model_files": {
+    "ML1": "ml1_ridge_pipeline.pkl",
+    "ML2": "ml2_gradient_boosting.pkl",
+    "ML3": "ml3_catboost.cbm",
+    "ML4": "ml4_bagging.pkl",
+    "ML5": "ml5_stacking.pkl",
+    "ML6": "ml6_fcnn.keras",
+    "ML6_scaler": "ml6_fcnn_scaler.pkl"
+  }
+}
